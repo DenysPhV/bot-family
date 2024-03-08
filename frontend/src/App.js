@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+/** @format */
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from "react";
+import FacebookLoginButton from "./components/FacebookLoginButton";
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      day: "",
+    };
+  }
+
+  componentDidMount() {
+    fetch("/api/day")
+      .then((response) => response.json())
+      .then((response) => this.setState({ day: response.day }));
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Hey! It's {this.state.day}</h1>
+        <FacebookLoginButton />
+      </div>
+    );
+  }
 }
 
 export default App;
