@@ -1,0 +1,10 @@
+.venv
+venv
+env
+.env
+backend/Dockerfile
+
+node_modules
+npm-debug.log
+Dockerfile
+yarn-error.log

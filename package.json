@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "facebook-nodejs-business-sdk": "^19.0.0"
+  }
+}
