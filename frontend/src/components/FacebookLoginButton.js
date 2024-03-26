@@ -11,7 +11,7 @@ class FacebookLoginButton extends React.Component {
         appId: "681439017515679",
         cookie: true,
         xfbml: true,
-        version: "v11.0",
+        version: "v19.0",
       });
     };
 
