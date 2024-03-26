@@ -152,7 +152,9 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-
+.dockerignore
+frontend/fly.toml
+backend/fly.toml
 
 
 # PyCharm
